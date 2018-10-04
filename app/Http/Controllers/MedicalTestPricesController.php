@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MedicalTestsController extends Controller
+class MedicalTestPricesController extends Controller
 {
     //
     public function index(Request $request)
