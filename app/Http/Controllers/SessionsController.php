@@ -9,18 +9,18 @@ class SessionsController extends Controller
     //
     public function create(Request $request)
     {
-        return view('login');
+        return view('authy.login');
     }
 
 
     public function save(Request $request)
     {
-        return view('dashboard');
+        return view('authy.login');
     }
 
 
     public function destroy(Request $request)
     {
-        return view('login');
+        return view('authy.login');
     }
 }

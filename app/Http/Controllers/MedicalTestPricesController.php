@@ -28,6 +28,12 @@ class MedicalTestPricesController extends Controller
     }
 
 
+    public function save(Request $request)
+    {
+        return view('save');
+    }
+
+
     public function update(Request $request,MedicalTestPrice $medicalTestPrice)
     {
         return view('update');

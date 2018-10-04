@@ -26,6 +26,12 @@ class MedicalCentersController extends Controller
     }
 
 
+    public function save(Request $request)
+    {
+        return view('save');
+    }
+
+
     public function update(Request $request,MedicalCenter $medicalCenter)
     {
         return view('update');
