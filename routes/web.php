@@ -19,8 +19,15 @@ Route::get('/welcome', function () {
 Route::get('/','MainController@index');
 Route::get('/dashboard','MainController@dashboard');
 
+//move these to the api file
+Route::get('/api/types','');
+Route::get('/api/types/{type}/tests','')->where('type','[0-9]');
+Route::get('/api/tests','');
+/////////////////////////////////////
+
+
 Route::get('/centers','MedicalCentersController@index');
-Route::get('/centers/{center}','MedicalCentersController@center');
+Route::get('/centers/{center}/','MedicalCentersController@center')->where('center', '[0-9]+');
 Route::get('/centers/create','MedicalCentersController@create');
 Route::post('/centers/save','MedicalCentersController@save');
 Route::post('/centers/{center}/update','MedicalCentersController@update');
@@ -34,7 +41,7 @@ Route::post('/tests/{test}/update','MedicalTestsController@update');
 Route::get('/tests/{test}/delete','MedicalTestsController@delete');
 
 Route::get('/prices','MedicalTestPricesController@index');
-Route::get('/centers/{center}/tests/{test}/prices/{price}','MedicalTestPricesController@price');
+Route::get('/prices/{price}','MedicalTestPricesController@price');
 Route::get('/prices/create','MedicalTestPricesController@create');
 Route::post('/prices/save','MedicalTestPricesController@save');
 Route::post('/prices/{price}/update','MedicalTestPricesController@update');

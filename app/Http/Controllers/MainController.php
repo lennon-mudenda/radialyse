@@ -9,12 +9,12 @@ class MainController extends Controller
     //
     public function index(Request $request)
     {
-        return view('home');
+        return view('dashboard.index');
     }
 
 
     public function dashboard()
     {
-        return view('dashboard');
+        return view('dashboard.index');
     }
 }
