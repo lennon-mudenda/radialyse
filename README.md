@@ -18,14 +18,14 @@ Our API has a number of endpoints each returning data in JSON format. At first t
 
     
     {[
-		 {
-			 'id'   : 1,
-			 'name'	:	'Imagerie'
-		 },
-		 {
-			 'id'   : 2,
-			 'name'	: 'Analyse'
-		 }
+	  {
+	    'id'   : 1,
+		'name'	:	'Imagerie'
+	  },
+	  {
+		'id'   : 2,
+		'name'	: 'Analyse'
+	  }
     ]}
    Above is an example of the results returned when you make a GET request to the endpoint from Android or  JavaScript via JSON
 
