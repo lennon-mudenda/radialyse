@@ -13,8 +13,9 @@ class MainController extends Controller
     }
 
 
-    public function dashboard()
+    public function dashboard(Request $request)
     {
         return view('dashboard.index');
     }
 }
+?>
