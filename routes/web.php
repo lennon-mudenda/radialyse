@@ -19,13 +19,6 @@ Route::get('/welcome', function () {
 Route::get('/','MainController@index');
 Route::get('/dashboard','MainController@dashboard');
 
-//move these to the api file
-//Route::get('/api/types','');
-//Route::get('/api/types/{type}/tests','')->where('type','[0-9]');
-//Route::get('/api/tests','');
-/////////////////////////////////////
-
-
 Route::get('/centers','MedicalCentersController@index');
 Route::get('/centers/{center}/','MedicalCentersController@center')->where('center', '[0-9]+');
 Route::get('/centers/create','MedicalCentersController@create');
