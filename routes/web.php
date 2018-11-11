@@ -27,7 +27,7 @@ Route::post('/centers/{center}/update','MedicalCentersController@update');
 Route::get('/centers/{center}/delete','MedicalCentersController@delete');
 
 Route::get('/tests','MedicalTestsController@index');
-Route::get('/tests/{test}','MedicalTestsController@test');
+Route::get('/tests/{test}/','MedicalTestsController@test')->where('test', '[0-9]+');
 Route::get('/tests/create','MedicalTestsController@create');
 Route::post('/tests/save','MedicalTestsController@save');
 Route::post('/tests/{test}/update','MedicalTestsController@update');

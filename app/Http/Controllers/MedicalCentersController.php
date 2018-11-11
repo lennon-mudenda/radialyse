@@ -45,7 +45,7 @@ class MedicalCentersController extends Controller
         }*/
         $center = new MedicalCenter;
         $center->name = $request->input('name');
-        $center->address = $request->input('name');
+        $center->address = $request->input('address');
         $center->long = $request->input('longitude');
         $center->lat = $request->input('latitude');
         $center->phone = $request->input('phone');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MedicalTestType;
 use Illuminate\Http\Request;
 
 use App\MedicalTest;
@@ -18,13 +19,14 @@ class MedicalTestsController extends Controller
 
     public function test(Request $request,MedicalTest $medicalTest)
     {
-        return view('medical_center')->with('test',$medicalTest);
+        return view('dashboard.medical_tests')->with('test',$medicalTest);
     }
 
 
     public function create(Request $request)
     {
-        return view('create');
+        $types = MedicalTestType::all();
+        return view('dashboard.partials.medical_test_form')->with('medical_test_types',$types);
     }
 
 
