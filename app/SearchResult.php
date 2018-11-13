@@ -25,6 +25,15 @@ class SearchResult
 
     private function buildResultSet()
     {
-
+        foreach ($this->medicalTest->prices as $price)
+        {
+            $this->results[] = array(
+                "id"                =>      $price->id,
+                "center_name"       =>      $price->center->name,
+                "center_lat"        =>      $price->center->lat,
+                "center_long"       =>      $price->center->long,
+                "center_address"    =>      $price->center->address
+            );
+        }
     }
 }
