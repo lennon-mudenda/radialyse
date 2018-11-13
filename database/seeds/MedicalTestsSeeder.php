@@ -11,6 +11,12 @@ class MedicalTestsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        for ($i = 0;$i < 20;$i++)
+        {
+            $test = new \App\MedicalTestType;
+            $test->medical_test_type_id = $i % 2;
+            $test->name = "test ".$i;
+            $test->save();
+        }
     }
 }

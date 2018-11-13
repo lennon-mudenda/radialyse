@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\MedicalTest;
 use App\MedicalTestType;
+use App\SearchResult;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -22,12 +23,7 @@ class ApiController extends Controller
 
     public function search(Request $request,MedicalTest $medicalTest)
     {
-        $prices = $medicalTest->prices();
-        $result = array();
-        foreach ($prices as $price)
-        {
-            $result[] = array();
-        }
-        return response()->json($result);
+        $resultSearch = new SearchResult($medicalTest);
+        return response()->json($resultSearch->getResults());
     }
 }
