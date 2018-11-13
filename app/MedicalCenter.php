@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MedicalCenter extends Model
 {
     //
-    public function test_prices()
+    public function prices()
     {
         return $this->hasMany('App\MedicalTestPrice');
     }

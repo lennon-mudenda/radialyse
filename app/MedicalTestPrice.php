@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class MedicalTestPrice extends Model
 {
     //
-    public function medical_center()
+    public function center()
     {
         return $this->belongsTo('App\MedicalCenter');
     }
 
 
-    public function medical_test()
+    public function test()
     {
         return $this->belongsTo('App\MedicalTest');
     }
