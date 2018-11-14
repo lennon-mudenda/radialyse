@@ -19,7 +19,7 @@ class SearchResult
      */
     public function getResults(): array
     {
-
+        $this->buildResultSet();
         return $this->results;
     }
 
