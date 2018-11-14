@@ -20,7 +20,7 @@ class CreateMedicalCentersTable extends Migration
             $table->string('phone');
             $table->double('lat');
             $table->double('long');
-            $table->integer('subscription_id');
+            //$table->unsignedInt('subscription_id');
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

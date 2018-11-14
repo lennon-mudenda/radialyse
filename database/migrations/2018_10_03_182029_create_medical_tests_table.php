@@ -15,7 +15,7 @@ class CreateMedicalTestsTable extends Migration
     {
         Schema::create('medical_tests', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('medical_test_type_id');
+            $table->unsignedInteger('medical_test_type_id');
             $table->string('name')->unique();
             $table->timestamps();
             $table->engine = 'InnoDB';

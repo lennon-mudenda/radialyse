@@ -21,11 +21,11 @@ class CreateForeinKeys extends Migration
             $table->foreign('medical_center_id')->references('id')->on('medical_centers');
             $table->foreign('medical_test_id')->references('id')->on('medical_tests');
         });
-
+        /*
         Schema::table('medical_centers', function($table) {
             $table->foreign('subscription_id')->references('id')->on('subscriptions');
         });
-
+        */
     }
 
     /**
