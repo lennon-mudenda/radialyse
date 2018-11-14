@@ -1,5 +1,5 @@
 <?php
-use Faker\Generator as Faker;
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
 class MedicalCentersSeeder extends Seeder
@@ -13,7 +13,7 @@ class MedicalCentersSeeder extends Seeder
     {
         for ($i = 0;$i < 20;$i++)
         {
-            $faker = new Faker;
+            $faker = Faker::create();
             $center = new \App\MedicalCenter;
             $center->name = $faker->company;
             $center->long = $faker->longitude;

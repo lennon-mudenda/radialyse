@@ -15,14 +15,14 @@ class CreateMedicalCentersTable extends Migration
     {
         Schema::create('medical_centers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('name');
             $table->string('address');
             $table->string('phone');
             $table->double('lat');
             $table->double('long');
             $table->integer('subscription_id');
             $table->timestamps();
-            //$table->foreign('subscription_id')->references('id')->on('subscriptions');
+
         });
     }
 

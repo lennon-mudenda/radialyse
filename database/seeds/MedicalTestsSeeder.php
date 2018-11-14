@@ -13,7 +13,7 @@ class MedicalTestsSeeder extends Seeder
     {
         for ($i = 0;$i < 20;$i++)
         {
-            $test = new \App\MedicalTestType;
+            $test = new \App\MedicalTest;
             $test->medical_test_type_id = $i % 2;
             $test->name = "test ".$i;
             $test->save();

@@ -14,13 +14,11 @@ class CreateMedicalTestPricesTable extends Migration
     public function up()
     {
         Schema::create('medical_test_prices', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unique();
             $table->integer('medical_test_id');
             $table->integer('medical_center_id');
             $table->integer('price');
             $table->timestamps();
-            //$table->foreign('medical_center_id')->references('id')->on('medical_centers');
-            //$table->foreign('medical_test_id')->references('id')->on('medical_tests');
         });
     }
 

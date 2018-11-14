@@ -18,7 +18,7 @@ class CreateMedicalTestsTable extends Migration
             $table->integer('medical_test_type_id');
             $table->string('name')->unique();
             $table->timestamps();
-            //$table->foreign('medical_test_type_id')->references('id')->on('medical_test_types');
+
         });
     }
 

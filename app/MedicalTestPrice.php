@@ -9,12 +9,12 @@ class MedicalTestPrice extends Model
     //
     public function center()
     {
-        return $this->belongsTo('App\MedicalCenter');
+        return $this->belongsTo('App\MedicalCenter','medical_center_id');
     }
 
 
     public function test()
     {
-        return $this->belongsTo('App\MedicalTest');
+        return $this->belongsTo('App\MedicalTest','medical_test_id');
     }
 }
