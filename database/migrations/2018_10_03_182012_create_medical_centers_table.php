@@ -22,7 +22,7 @@ class CreateMedicalCentersTable extends Migration
             $table->double('long');
             $table->integer('subscription_id');
             $table->timestamps();
-
+            $table->engine = 'InnoDB';
         });
     }
 

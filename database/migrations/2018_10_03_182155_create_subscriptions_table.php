@@ -17,6 +17,7 @@ class CreateSubscriptionsTable extends Migration
             $table->increments('id');
             $table->integer('price');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

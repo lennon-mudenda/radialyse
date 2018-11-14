@@ -19,6 +19,7 @@ class CreateMedicalTestPricesTable extends Migration
             $table->integer('medical_center_id');
             $table->integer('price');
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

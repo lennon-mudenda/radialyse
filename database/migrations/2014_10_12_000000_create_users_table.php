@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->engine = 'InnoDB';
             //$table->foreign('medical_center_id')->references('id')->on('medical_centers');
         });
     }
