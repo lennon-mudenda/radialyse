@@ -17,6 +17,7 @@ Route::get('/welcome', function () {
 
 
 Route::get('/','MainController@index');
+Route::get('/search','MainController@search');
 Route::get('/dashboard','MainController@dashboard');
 
 Route::get('/centers','MedicalCentersController@index');
