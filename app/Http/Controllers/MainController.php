@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MedicalTestType;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -20,7 +21,8 @@ class MainController extends Controller
 
     public function search()
     {
-        return view('clientSide.search');
+        $types = MedicalTestType::all();
+        return view('clientSide.search')->with('types',$types);
     }
 }
 ?>

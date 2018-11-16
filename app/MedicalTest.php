@@ -11,4 +11,9 @@ class MedicalTest extends Model
     {
         return $this->hasMany('App\MedicalTestPrice');
     }
+
+    public function type()
+    {
+        return $this->belongsTo('App\MedicalTestType','medical_test_type_id');
+    }
 }

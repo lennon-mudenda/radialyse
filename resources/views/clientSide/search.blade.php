@@ -285,28 +285,37 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="single-blog">
                             <div class="single-blog-img">
-                                <a href="blog-details.html">
+
                                     <div id="googleMap" style="width:100%;height:400px;"></div>
-                                </a>
-                            </div>
-                            <div class="blog-meta">
-                  <span class="comments-type">
-														<i class="fa fa-hospital-o" aria-hidden="true"></i>
-											<a href="#">2 Lboratoire</a>
-										</span>
 
                             </div>
+                            <br>
                             <div class="blog-text">
+
                                 <h4>
-                                    <a href="#">Post my imagine Items</a>
+                                    Search
                                 </h4>
-                                <p>
-                                    Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit.
-                                </p>
+                                <div class="">
+                                    <form onsubmit="" class="form-inline">
+                                        <div id="search" class="form-group col-12" >
+                                            <select class="form-control" id="type">
+                                                <option selected>Select Test type</option>
+                                                @foreach($types as $type)
+                                                    <option value={{$type->id}}>{{$type->name}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <select class="form-control">
+
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="results">
+                                    <div class="filters"></div>
+                                </div>
                             </div>
-                            <span>
-										<a href="blog-details.html" class="ready-btn">Read more</a>
-									</span>
                         </div>
                     </div>
                     <!-- End single blog -->

@@ -31,52 +31,17 @@
 								<tr>
 									<th>Id</th>
 									<th>Name</th>
-									<th>Address</th>
+									<th>Type</th>
 								</tr>
 								</tfoot>
 								<tbody >
-								<tr>
-									<td>Tiger Nixon</td>
-									<td>System Architect</td>
-									<td>Edinburgh</td>
-
-								</tr>
-								<tr>
-									<td>Garrett Winters</td>
-									<td>Accountant</td>
-									<td>Tokyo</td>
-
-								</tr>
-								<tr>
-									<td>Ashton Cox</td>
-									<td>Junior Technical Author</td>
-									<td>San Francisco</td>
-
-								</tr>
-								<tr>
-									<td>Cedric Kelly</td>
-									<td>Senior Javascript Developer</td>
-									<td>Edinburgh</td>
-
-								</tr>
-								<tr>
-									<td>Airi Satou</td>
-									<td>Accountant</td>
-									<td>Tokyo</td>
-
-								</tr>
-								<tr>
-									<td>Brielle Williamson</td>
-									<td>Integration Specialist</td>
-									<td>New York</td>
-
-								</tr>
-								<tr>
-									<td>Herrod Chandler</td>
-									<td>Sales Assistant</td>
-									<td>San Francisco</td>
-
-								</tr>
+									@foreach($tests as $test)
+									<tr>
+										<td>{{ $test->id }}</td>
+										<td>{{ $test->name }}</td>
+										<td>{{ $test->type->name }}</td>
+									</tr>
+									@endforeach
 								</tbody>
 							</table>
 						</div>
